@@ -1,69 +1,110 @@
-import Image from "next/image";
+"use client";
+
+import { useEffect, useState } from "react";
+import { Hero } from "@/components/beranda";
+import { Projects } from "@/components/project";
+import { CV } from "@/components/cv";
+import { Kontak } from "@/components/kontak";
 
 export default function Home() {
+  const [activeSection, setActiveSection] = useState("beranda");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["beranda", "project", "cv", "kontak"];
+      const scrollPosition = window.scrollY + 120;
+
+      for (const sectionId of sections) {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          const top = el.offsetTop;
+          const height = el.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            setActiveSection(sectionId);
+            break;
+          }
+        }
+      }
+
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
+        setActiveSection("kontak");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navLinkClass = (id: string) =>
+    `relative px-1 pb-1 transition-all after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:bg-[#111111] after:rounded-full after:transition-all ${
+      activeSection === id
+        ? "text-[#111111] font-bold after:w-full"
+        : "text-[#555555] hover:text-[#111111] after:w-0"
+    }`;
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+    <div className="min-h-screen bg-[#F5F5F7] text-[#111111] font-sans selection:bg-[#111111] selection:text-[#F5F5F7] scroll-smooth relative">
+      {/* Background Big Text */}
+      <div className="fixed inset-0 pointer-events-none z-0 flex items-center justify-center overflow-hidden">
+        <span className="font-black leading-none tracking-[-0.08em] text-[#E6E6E8]/60 text-[50vw] select-none opacity-80">
+          TRY
+        </span>
+      </div>
+
+      {/* Navbar */}
+      <nav className="sticky top-0 z-50 backdrop-blur-md bg-[#F5F5F7]/80 border-b border-[#E5E5E7]/60">
+        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+          <div className="flex items-center space-x-3">
+            <span className="w-8 h-8 rounded-lg bg-[#111111] text-[#F5F5F7] flex items-center justify-center font-bold text-sm tracking-tighter shadow-sm">
+              T
+            </span>
+            <span className="font-semibold text-base tracking-tight">
+              TryyY
+            </span>
+          </div>
+          <div className="hidden md:flex items-center space-x-8 text-sm font-medium">
+            <a href="#beranda" className={navLinkClass("beranda")}>Beranda</a>
+            <a href="#project" className={navLinkClass("project")}>Project</a>
+            <a href="#cv" className={navLinkClass("cv")}>CV</a>
+            <a href="#kontak" className={navLinkClass("kontak")}>Kontak</a>
+          </div>
+          <div>
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="#kontak"
+              className="text-xs font-medium uppercase tracking-wider px-4 py-2 rounded-full bg-[#111111] text-[#F5F5F7] hover:bg-black transition-all shadow-sm"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+              Let's Talk
+            </a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </nav>
+
+      {/* Content Container */}
+      <div className="relative z-10">
+        {/* Main Sections */}
+        <Hero />
+        <Projects />
+        <CV />
+        <Kontak />
+
+        {/* Footer */}
+        <footer className="border-t border-[#E5E5E7] bg-white/50 backdrop-blur-sm py-12">
+          <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-[#777777]">
+            <div className="flex items-center space-x-2">
+              <span className="font-semibold text-[#111111]">TryyY</span>
+              <span>© {new Date().getFullYear()} All rights reserved.</span>
+            </div>
+            <div className="flex items-center space-x-6">
+              <a href="#beranda" className="hover:text-[#111111] transition-colors">Beranda</a>
+              <a href="#project" className="hover:text-[#111111] transition-colors">Project</a>
+              <a href="#cv" className="hover:text-[#111111] transition-colors">CV</a>
+              <a href="#kontak" className="hover:text-[#111111] transition-colors">Kontak</a>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
   );
 }
