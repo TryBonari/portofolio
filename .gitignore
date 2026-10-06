@@ -19,6 +19,7 @@
 
 # production
 /build
+/ui.md
 
 # misc
 .DS_Store
