@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Hero } from "@/components/beranda";
+import { About } from "@/components/about";
 import { Projects } from "@/components/project";
 import { CV } from "@/components/cv";
 import { Kontak } from "@/components/kontak";
@@ -11,7 +12,7 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["beranda", "project", "cv", "kontak"];
+      const sections = ["beranda", "about", "project", "cv", "kontak"];
       const scrollPosition = window.scrollY + 120;
 
       for (const sectionId of sections) {
@@ -48,7 +49,7 @@ export default function Home() {
     <div className="min-h-screen bg-[#F5F5F7] text-[#111111] font-sans selection:bg-[#111111] selection:text-[#F5F5F7] scroll-smooth relative">
       {/* Background Big Text */}
       <div className="fixed inset-0 pointer-events-none z-0 flex items-center justify-center overflow-hidden">
-        <span className="font-black leading-none tracking-[-0.08em] text-[#E6E6E8]/60 text-[50vw] select-none opacity-80">
+        <span className="font-black leading-none tracking-normal md:tracking-wider text-[#E6E6E8]/60 text-[35vw] md:text-[40vw] select-none opacity-80">
           TRY
         </span>
       </div>
@@ -64,12 +65,13 @@ export default function Home() {
               TryyY
             </span>
           </div>
-          <div className="hidden md:flex items-center space-x-8 text-sm font-medium">
-            <a href="#beranda" className={navLinkClass("beranda")}>Beranda</a>
-            <a href="#project" className={navLinkClass("project")}>Project</a>
-            <a href="#cv" className={navLinkClass("cv")}>CV</a>
-            <a href="#kontak" className={navLinkClass("kontak")}>Kontak</a>
-          </div>
+            <div className="hidden md:flex items-center space-x-8 text-sm font-medium">
+              <a href="#beranda" className={navLinkClass("beranda")}>Beranda</a>
+              <a href="#about" className={navLinkClass("about")}>About</a>
+              <a href="#project" className={navLinkClass("project")}>Project</a>
+              <a href="#cv" className={navLinkClass("cv")}>CV</a>
+              <a href="#kontak" className={navLinkClass("kontak")}>Kontak</a>
+            </div>
           <div>
             <a
               href="#kontak"
@@ -85,6 +87,7 @@ export default function Home() {
       <div className="relative z-10">
         {/* Main Sections */}
         <Hero />
+        <About />
         <Projects />
         <CV />
         <Kontak />
@@ -98,6 +101,7 @@ export default function Home() {
             </div>
             <div className="flex items-center space-x-6">
               <a href="#beranda" className="hover:text-[#111111] transition-colors">Beranda</a>
+              <a href="#about" className="hover:text-[#111111] transition-colors">About</a>
               <a href="#project" className="hover:text-[#111111] transition-colors">Project</a>
               <a href="#cv" className="hover:text-[#111111] transition-colors">CV</a>
               <a href="#kontak" className="hover:text-[#111111] transition-colors">Kontak</a>

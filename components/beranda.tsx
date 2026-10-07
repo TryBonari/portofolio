@@ -1,23 +1,50 @@
 export function Hero() {
   return (
-    <section id="beranda" className="max-w-6xl mx-auto px-6 pt-24 pb-20 md:pt-36 md:pb-32 flex flex-col items-start justify-center">
-      <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#E5E5E7]/60 text-xs font-medium mb-6 text-[#333333]">
-        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-        <span>Available for new projects</span>
-      </div>
-      <h1 className="text-4xl md:text-7xl font-bold tracking-tight leading-[1.1] mb-6 text-[#111111] max-w-4xl">
-        Crafting digital experiences with precision & minimalism.
-      </h1>
-      <p className="text-lg md:text-xl text-[#555555] max-w-2xl font-normal leading-relaxed mb-10">
-        Halo, ini website portofolio saya. Saya seorang pengembang yang berfokus pada kesederhanaan fungsionalitas, performa tinggi, dan estetika modern.
-      </p>
-      <div className="flex flex-wrap items-center gap-4">
-        <a href="#project" className="px-6 py-3 rounded-xl bg-[#111111] text-[#F5F5F7] font-medium text-sm hover:bg-black transition-all shadow-md hover:translate-y-[-1px]">
-          Explore Projects
-        </a>
-        <a href="#kontak" className="px-6 py-3 rounded-xl bg-white border border-[#E5E5E7] text-[#111111] font-medium text-sm hover:bg-[#F5F5F7] transition-all">
-          Get in Touch
-        </a>
+    <section id="beranda" className="relative w-full min-h-[85vh] bg-[#F7F2EE] flex items-center overflow-hidden py-16">
+      {/* Background Decorative Blob / Shape (Bottom Left) */}
+      <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#FFB6A3]/60 rounded-full filter blur-3xl pointer-events-none -translate-x-1/2 translate-y-1/2"></div>
+      
+      <div className="max-w-7xl mx-auto w-full px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+        
+        {/* Left Column: Heading & Highlight */}
+        <div className="lg:col-span-6 flex flex-col justify-center pt-8">
+          <h1 className="text-4xl md:text-6xl font-serif font-bold text-[#1a1a1a] leading-[1.15] mb-6">
+            Web, Database <br />
+            dan sedikit <br />
+            <span className="relative inline-block">
+              {/* Highlight background yellow mark */}
+              <span className="absolute inset-0 bg-[#FFD43B] -rotate-1 transform -z-10 translate-y-2"></span>
+              Machine Learning.
+            </span>
+          </h1>
+
+          {/* Floating Card */}
+          <div className="mt-8 bg-[#D8C7B5]/90 backdrop-blur-sm p-6 md:p-8 rounded-sm shadow-xl max-w-lg border border-[#C5B4A1]">
+            <h3 className="font-serif text-xl md:text-2xl font-bold text-[#1a1a1a] mb-3">
+              <span className="underline decoration-1 underline-offset-4">Halo!</span>
+            </h3>
+            <p className="text-sm md:text-base text-[#333333] leading-relaxed mb-6 font-sans">
+              Saya Try Bonari Hutabarat, lulusan Teknik Informatika dengan ketertarikan pada pengembangan web, data, dan machine learning. Saya senang mempelajari hal baru melalui project dan mencoba menerapkan apa yang saya pelajari ke dalam sesuatu yang bisa digunakan.
+            </p>
+            <a 
+              href="#project" 
+              className="inline-flex items-center space-x-3 text-xs md:text-sm font-semibold tracking-wider uppercase text-[#1a1a1a] pb-1 border-b-2 border-[#1a1a1a] hover:opacity-70 transition-opacity"
+            >
+            </a>
+          </div>
+        </div>
+
+        {/* Right Column: Featured Image */}
+        <div className="lg:col-span-6 relative flex justify-end">
+          <div className="w-full max-w-lg aspect-[4/5] relative overflow-hidden rounded-sm shadow-2xl">
+            <img 
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800" 
+              alt="Hero Portrait" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
       </div>
     </section>
   );
