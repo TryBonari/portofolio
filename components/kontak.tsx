@@ -22,7 +22,7 @@ export function Kontak() {
             Send Email
           </a>
           <a
-            href="https://wa.me/62848190653"
+            href="https://wa.me/6282248190653"
             target="_blank"
             rel="noopener noreferrer"
             className="px-10 py-4 bg-[#F7F2EE] border border-[#1a1a1a] text-[#1a1a1a] font-semibold text-xs tracking-wider uppercase rounded-sm hover:bg-[#D8C7B5]/30 transition-colors w-full sm:w-auto text-center"
