@@ -9,12 +9,13 @@ export function Hero() {
         {/* Left Column: Heading & Highlight */}
         <div className="lg:col-span-6 flex flex-col justify-center pt-8">
           <h1 className="text-4xl md:text-6xl font-serif font-bold text-[#1a1a1a] leading-[1.15] mb-6">
-            Web, Database <br />
+            Machine Learning, <br />
+            Database <br />
             dan sedikit <br />
             <span className="relative inline-block">
               {/* Highlight background yellow mark */}
               <span className="absolute inset-0 bg-[#FFD43B] -rotate-1 transform -z-10 translate-y-2"></span>
-              Machine Learning.
+              Website.
             </span>
           </h1>
 
@@ -24,7 +25,7 @@ export function Hero() {
               <span className="underline decoration-1 underline-offset-4">Halo!</span>
             </h3>
             <p className="text-sm md:text-base text-[#333333] leading-relaxed mb-6 font-sans">
-              Saya Try Bonari Hutabarat, lulusan Teknik Informatika dengan ketertarikan pada pengembangan web, data, dan machine learning. Saya senang mempelajari hal baru melalui project dan mencoba menerapkan apa yang saya pelajari ke dalam sesuatu yang bisa digunakan.
+              Saya Try Bonari Hutabarat, lulusan Teknik Informatika dengan ketertarikan pada pengembangan web, data, dan machine learning.
             </p>
             <a 
               href="#project" 
@@ -35,15 +36,14 @@ export function Hero() {
         </div>
 
         {/* Right Column: Featured Image */}
-        <div className="lg:col-span-6 relative flex justify-end">
-          <div className="w-full max-w-lg aspect-[4/5] relative overflow-hidden rounded-sm shadow-2xl">
-            <img 
-              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=800" 
-              alt="Hero Portrait" 
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
+{/* Right Column: Featured Image */}
+<div className="lg:col-span-6 relative flex justify-center items-center">
+  <img
+    src="/assets/halaman.jpeg"
+    alt="Hero Illustration"
+    className="w-full h-auto object-contain"
+  />
+</div>
 
       </div>
     </section>

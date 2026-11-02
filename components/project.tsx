@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Projects() {
   return (
     <section id="project" className="py-24 bg-[#F7F2EE] border-t border-[#D8C7B5]/40">
@@ -23,15 +25,15 @@ export function Projects() {
                 <span className="text-xs font-mono uppercase tracking-widest text-[#1a1a1a]/60">Web Portal Sekolah</span>
                 <span className="text-xs font-semibold tracking-wider px-3 py-1 bg-[#1a1a1a] text-[#F7F2EE] rounded-full">NEXT.JS</span>
               </div>
-              <h4 className="text-2xl font-serif font-bold mb-3 text-[#1a1a1a] group-hover:underline">Dashboard admin dan user</h4>
+              <h4 className="text-2xl font-serif font-bold mb-3 text-[#1a1a1a] group-hover:underline">Dashboard sekolah admin dan user</h4>
               <p className="text-[#444444] text-sm leading-relaxed mb-8 font-sans">
                   Portal sekolah dua sisi dengan antarmuka yang bersih, cepat, dan intuitif, memudahkan admin mengelola data sekaligus pengguna mengakses informasi akademik.
               </p>
             </div>
-            <a href="#kontak" className="inline-flex items-center space-x-2 text-xs font-semibold tracking-wider uppercase text-[#1a1a1a] pb-1 border-b-2 border-[#1a1a1a] w-max">
+            <Link href="/project" className="inline-flex items-center space-x-2 text-xs font-semibold tracking-wider uppercase text-[#1a1a1a] pb-1 border-b-2 border-[#1a1a1a] w-max">
               <span>Lihat proyek</span>
               <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </a>
+            </Link>
           </div>
 
           {/* Project 2 */}
@@ -46,7 +48,7 @@ export function Projects() {
                 Analisis sentimen pengguna aplikasi FLOQ menggunakan algoritma Support Vectore Machine (SVM)
               </p>
             </div>
-            <a href="#kontak" className="inline-flex items-center space-x-2 text-xs font-semibold tracking-wider uppercase text-[#1a1a1a] pb-1 border-b-2 border-[#1a1a1a] w-max">
+            <a href="	https://repository.mikroskil.ac.id/id/eprint/4504" className="inline-flex items-center space-x-2 text-xs font-semibold tracking-wider uppercase text-[#1a1a1a] pb-1 border-b-2 border-[#1a1a1a] w-max">
               <span>Lihat skripsi</span>
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </a>

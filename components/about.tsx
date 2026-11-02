@@ -35,7 +35,7 @@ export function About() {
         >
           <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-white shadow-2xl shrink-0">
             <img 
-              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=800" 
+              src="/assets/x.jpg"
               alt="About Portrait" 
               className="w-full h-full object-cover"
             />
@@ -53,8 +53,8 @@ export function About() {
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#1a1a1a] mb-2">TryyY</h2>
           <h3 className="text-lg font-bold text-[#1a1a1a] mb-4 tracking-tight">A Bit About Me</h3>
           <div className="space-y-4 text-[#444444] text-base leading-relaxed font-sans">
-            <p>I am a designer and developer based in Indonesia, specializing in building clean, functional, and aesthetic digital products.</p>
-            <p>My approach combines technical precision with a deep understanding of user needs, ensuring every project performs exceptionally.</p>
+            <p>Fresh graduate Teknik Informatika yang memiliki minat pada bidang pengembangan perangkat lunak (software development). Memiliki pemahaman dasar tentang pemrograman, logika algoritma, basis data, dan pengembangan aplikasi menggunakan beberapa bahasa pemrograman.</p>
+            <p>Mampu berpikir logis, memecahkan masalah, serta memiliki ketelitian dan motivasi untuk terus mempelajari teknologi baru, mengembangkan keterampilan teknis, dan berkontribusi dalam tim pengembangan perangkat lunak</p>
           </div>
         </div>
 

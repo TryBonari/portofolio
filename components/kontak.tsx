@@ -16,13 +16,13 @@ export function Kontak() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
           <a
-            href="mailto:try.sutrisno@example.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=trybonari3@gmail.com"
             className="px-10 py-4 bg-[#1a1a1a] text-[#F7F2EE] font-semibold text-xs tracking-wider uppercase rounded-sm hover:bg-black transition-colors w-full sm:w-auto text-center"
           >
             Send Email
           </a>
           <a
-            href="https://wa.me/"
+            href="https://wa.me/62848190653"
             target="_blank"
             rel="noopener noreferrer"
             className="px-10 py-4 bg-[#F7F2EE] border border-[#1a1a1a] text-[#1a1a1a] font-semibold text-xs tracking-wider uppercase rounded-sm hover:bg-[#D8C7B5]/30 transition-colors w-full sm:w-auto text-center"

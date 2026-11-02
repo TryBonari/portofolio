@@ -8,7 +8,6 @@ export function CV() {
 
           <div className="relative z-10">
             <h2 className="text-sm font-semibold tracking-[0.2em] uppercase text-[#F7F2EE]/60 mb-4 flex items-center gap-4">
-              <span className="w-8 h-px bg-[#F7F2EE]/60"></span>
               Curriculum Vitae
             </h2>
             <h3 className="text-3xl md:text-4xl font-serif font-bold mb-4 leading-tight">
@@ -21,8 +20,8 @@ export function CV() {
 
           <div className="relative z-10">
             <a
-              href="#"
-              download
+              href="/assets/cv.pdf"
+              download="CV_Tryy.pdf"
               className="inline-flex items-center px-8 py-4 bg-[#FFD43B] text-[#1a1a1a] font-semibold text-xs tracking-wider uppercase rounded-sm hover:bg-[#FFEB3B] transition-colors whitespace-nowrap"
             >
               Download CV (PDF) →
