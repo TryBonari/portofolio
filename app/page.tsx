@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Hero } from "@/components/beranda";
-import { About } from "@/components/about";
-import { Projects } from "@/components/project";
-import { CV } from "@/components/cv";
-import { Kontak } from "@/components/kontak";
+import { Hero } from "@/page/beranda";
+import { About } from "@/page/about";
+import { Projects } from "@/page/project";
+import { CV } from "@/page/cv";
+import { Kontak } from "@/page/kontak";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("beranda");

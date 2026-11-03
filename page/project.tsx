@@ -28,12 +28,15 @@ export function Projects() {
               <h4 className="text-2xl font-serif font-bold mb-3 text-[#1a1a1a] group-hover:underline">Dashboard sekolah admin dan user</h4>
               <p className="text-[#444444] text-sm leading-relaxed mb-8 font-sans">
                   Portal sekolah dua sisi dengan antarmuka yang bersih, cepat, dan intuitif, memudahkan admin mengelola data sekaligus pengguna mengakses informasi akademik.
+                  <br />
+                  admin login : ADM001 : adminxxx ||
+                  user login  : A0001 : 121212
               </p>
             </div>
-            <Link href="/project" className="inline-flex items-center space-x-2 text-xs font-semibold tracking-wider uppercase text-[#1a1a1a] pb-1 border-b-2 border-[#1a1a1a] w-max">
+            <a href="https://portalsekola.netlify.app/" className="inline-flex items-center space-x-2 text-xs font-semibold tracking-wider uppercase text-[#1a1a1a] pb-1 border-b-2 border-[#1a1a1a] w-max">
               <span>Lihat proyek</span>
               <span className="group-hover:translate-x-1 transition-transform">→</span>
-            </Link>
+            </a>
           </div>
 
           {/* Project 2 */}
