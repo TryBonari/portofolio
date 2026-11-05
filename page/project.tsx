@@ -26,14 +26,20 @@ export function Projects() {
                 <span className="text-xs font-semibold tracking-wider px-3 py-1 bg-[#1a1a1a] text-[#F7F2EE] rounded-full">NEXT.JS</span>
               </div>
               <h4 className="text-2xl font-serif font-bold mb-3 text-[#1a1a1a] group-hover:underline">Dashboard sekolah admin dan user</h4>
-              <p className="text-[#444444] text-sm leading-relaxed mb-8 font-sans">
+              <p className="text-[#444444] text-sm leading-relaxed mb-4 font-sans">
                   Portal sekolah dua sisi dengan antarmuka yang bersih, cepat, dan intuitif, memudahkan admin mengelola data sekaligus pengguna mengakses informasi akademik.
-                  <br />
-                  admin login : ADM001 : adminxxx ||
-                  user login  : A0001 : 121212
               </p>
+              <div className="bg-[#EBE2D9]/50 p-4 rounded-md border border-[#D8C7B5] space-y-2 mt-4 font-mono text-xs">
+                  <p className="font-semibold text-[#1a1a1a] mb-2 uppercase">Akses Demo:</p>
+                  <div className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-1 text-[#444444]">
+                    <span>Admin:</span>
+                    <span className="font-medium text-[#1a1a1a]">ADM001 / adminxxx</span>
+                    <span>User:</span>
+                    <span className="font-medium text-[#1a1a1a]">A0001 / 121212</span>
+                  </div>
+                </div>
             </div>
-            <a href="https://portalsekola.netlify.app/" className="inline-flex items-center space-x-2 text-xs font-semibold tracking-wider uppercase text-[#1a1a1a] pb-1 border-b-2 border-[#1a1a1a] w-max">
+            <a href="https://portalsekolaa.netlify.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-2 text-xs font-semibold tracking-wider uppercase text-[#1a1a1a] pb-1 border-b-2 border-[#1a1a1a] w-max">
               <span>Lihat proyek</span>
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </a>
@@ -51,7 +57,7 @@ export function Projects() {
                 Analisis sentimen pengguna aplikasi FLOQ menggunakan algoritma Support Vectore Machine (SVM)
               </p>
             </div>
-            <a href="	https://repository.mikroskil.ac.id/id/eprint/4504" className="inline-flex items-center space-x-2 text-xs font-semibold tracking-wider uppercase text-[#1a1a1a] pb-1 border-b-2 border-[#1a1a1a] w-max">
+            <a href="	https://repository.mikroskil.ac.id/id/eprint/4504" target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-2 text-xs font-semibold tracking-wider uppercase text-[#1a1a1a] pb-1 border-b-2 border-[#1a1a1a] w-max">
               <span>Lihat skripsi</span>
               <span className="group-hover:translate-x-1 transition-transform">→</span>
             </a>
