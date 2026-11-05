@@ -35,7 +35,7 @@ export function Projects() {
                     <span>Admin:</span>
                     <span className="font-medium text-[#1a1a1a]">ADM001 / adminxxx</span>
                     <span>User:</span>
-                    <span className="font-medium text-[#1a1a1a]">A0001 / 121212</span>
+                    <span className="font-medium text-[#1a1a1a]">A0005 / 121212</span>
                   </div>
                 </div>
             </div>
