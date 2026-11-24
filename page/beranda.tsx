@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function Hero() {
   return (
     <section id="beranda" className="relative w-full min-h-[85vh] bg-[#F7F2EE] flex items-center overflow-hidden py-16">
@@ -27,24 +29,20 @@ export function Hero() {
             <p className="text-sm md:text-base text-[#333333] leading-relaxed mb-6 font-sans">
               Saya Try Bonari Hutabarat, lulusan Teknik Informatika dengan ketertarikan pada pengembangan web, data, dan machine learning.
             </p>
-            <a 
-              href="#project" 
-              className="inline-flex items-center space-x-3 text-xs md:text-sm font-semibold tracking-wider uppercase text-[#1a1a1a] pb-1 border-b-2 border-[#1a1a1a] hover:opacity-70 transition-opacity"
-            >
-            </a>
           </div>
         </div>
 
         {/* Right Column: Featured Image */}
-{/* Right Column: Featured Image */}
-<div className="lg:col-span-6 relative flex justify-center items-center">
-  <img
-    src="/assets/halaman.jpeg"
-    alt="Hero Illustration"
-    className="w-full h-auto object-contain"
-  />
-</div>
-
+        <div className="lg:col-span-6 relative flex justify-center items-center">
+          <Image
+            src="/assets/halaman.jpeg"
+            alt="Hero Illustration"
+            width={600}
+            height={600}
+            priority
+            className="w-full h-auto object-contain"
+          />
+        </div>
       </div>
     </section>
   );

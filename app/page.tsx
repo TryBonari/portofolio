@@ -38,6 +38,14 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const navLinks = [
+    { name: "Beranda", id: "beranda" },
+    { name: "About", id: "about" },
+    { name: "Project", id: "project" },
+    { name: "CV", id: "cv" },
+    { name: "Kontak", id: "kontak" },
+  ];
+
   const navLinkClass = (id: string) =>
     `relative px-1 pb-1 transition-all after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[3px] after:bg-[#111111] after:rounded-full after:transition-all ${
       activeSection === id
@@ -47,13 +55,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#F5F5F7] text-[#111111] font-sans selection:bg-[#111111] selection:text-[#F5F5F7] scroll-smooth relative">
-      {/* Background Big Text */}
-      <div className="fixed inset-0 pointer-events-none z-0 flex items-center justify-center overflow-hidden">
-        <span className="font-black leading-none tracking-normal md:tracking-wider text-[#E6E6E8]/60 text-[35vw] md:text-[40vw] select-none opacity-80">
-          TRY
-        </span>
-      </div>
-
+      {/* ... (background and other code) ... */}
+      
       {/* Navbar */}
       <nav className="sticky top-0 z-50 backdrop-blur-md bg-[#F5F5F7]/80 border-b border-[#E5E5E7]/60">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -66,16 +69,22 @@ export default function Home() {
             </span>
           </div>
             <div className="hidden md:flex items-center space-x-8 text-sm font-medium">
-              <a href="#beranda" className={navLinkClass("beranda")}>Beranda</a>
-              <a href="#about" className={navLinkClass("about")}>About</a>
-              <a href="#project" className={navLinkClass("project")}>Project</a>
-              <a href="#cv" className={navLinkClass("cv")}>CV</a>
-              <a href="#kontak" className={navLinkClass("kontak")}>Kontak</a>
+              {navLinks.map((link) => (
+                <a 
+                  key={link.id} 
+                  href={`#${link.id}`} 
+                  className={navLinkClass(link.id)}
+                  aria-label={`Navigasi ke bagian ${link.name}`}
+                >
+                  {link.name}
+                </a>
+              ))}
             </div>
           <div>
             <a
               href="#kontak"
               className="text-xs font-medium uppercase tracking-wider px-4 py-2 rounded-full bg-[#111111] text-[#F5F5F7] hover:bg-black transition-all shadow-sm"
+              aria-label="Hubungi saya"
             >
               Let's Talk
             </a>

@@ -1,6 +1,5 @@
-"use client";
-
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 export function About() {
   const containerRef = useRef<HTMLElement>(null);
@@ -34,9 +33,11 @@ export function About() {
           }}
         >
           <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-white shadow-2xl shrink-0">
-            <img 
+            <Image 
               src="/assets/x.jpg"
-              alt="About Portrait" 
+              alt="Portrait Try Bonari Hutabarat"
+              width={400}
+              height={400}
               className="w-full h-full object-cover"
             />
           </div>
