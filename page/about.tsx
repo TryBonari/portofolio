@@ -53,7 +53,7 @@ export function About() {
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#1a1a1a] mb-2">TryyY</h2>
           <h3 className="text-lg font-bold text-[#1a1a1a] mb-4 tracking-tight">A Bit About Me</h3>
           <div className="space-y-4 text-[#444444] text-base leading-relaxed font-sans">
-            <p>Fresh graduate Teknik Informatika yang memiliki minat pada bidang pengembangan perangkat lunak (software development). Memiliki pemahaman dasar tentang pemrograman, logika algoritma, basis data, dan pengembangan aplikasi menggunakan beberapa bahasa pemrograman.</p>
+            <p>Fresh graduate Teknik Informatika yang memiliki minat pada bidang pengembangan perangkat lunak (software development) dan Database. Memiliki pemahaman dasar tentang pemrograman, logika algoritma, basis data, dan pengembangan aplikasi menggunakan beberapa bahasa pemrograman.</p>
             <p>Mampu berpikir logis, memecahkan masalah, serta memiliki ketelitian dan motivasi untuk terus mempelajari teknologi baru, mengembangkan keterampilan teknis, dan berkontribusi dalam tim pengembangan perangkat lunak</p>
           </div>
         </div>
